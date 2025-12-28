@@ -1,40 +1,102 @@
-/* Full background image */
+/* ----------------------------- */
+/* Full Background Image         */
+/* ----------------------------- */
 body {
     margin: 0;
     min-height: 100vh;
     background: url("image/background.jpg") no-repeat center center fixed;
     background-size: cover;
+    font-family: Arial, sans-serif;
 }
 
-/* Header image (10% height of viewport) */
+/* ----------------------------- */
+/* Header Image / Top Banner     */
+/* ----------------------------- */
 .top-banner img {
     width: 100%;
     height: auto;
-    max-height: 10vh;   /* 10% of viewport height */
+    max-height: 10vh;  /* desktop default */
     object-fit: cover;
     display: block;
 }
 
-/* Navbar */
+/* ----------------------------- */
+/* Navbar                        */
+/* ----------------------------- */
 .navbar-custom {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-custom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    padding: 0.5rem 1rem;
 }
 
 .navbar-custom .nav-link {
     color: #fff !important;
     font-weight: 500;
+    margin: 0 0.5rem;
+    white-space: nowrap; /* prevent breaking */
 }
 
 .navbar-custom .nav-link:hover {
     color: #ffc107 !important;
 }
 
-/* Content Section */
+/* ----------------------------- */
+/* Content Section (Centered)    */
+/* ----------------------------- */
 .content-section {
-    position: absolute;       /* position over background */
-    top: 50%;                 /* 50% from top */
-    left: 50%;                /* 50% from left */
-    transform: translate(-50%, -50%); /* center exactly */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #ffffff;
     text-align: center;
+    padding: 2rem;
+}
+
+/* Buttons inside content */
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap; /* wrap on small screens */
+    margin-top: 1rem;
+}
+
+.buttons a {
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-primary { background-color: #007bff; }
+.btn-secondary { background-color: #6c757d; }
+
+/* ----------------------------- */
+/* Responsive Adjustments        */
+/* ----------------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .top-banner img { max-height: 12vh; }
+    .content-section { padding: 1.5rem; font-size: 1.2rem; }
+}
+
+/* Large Phones */
+@media (max-width: 768px) {
+    .top-banner img { max-height: 15vh; }
+    .content-section { padding: 1rem; font-size: 1rem; }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    .top-banner img { max-height: 18vh; }
+    .content-section { top: 45%; padding: 0.8rem; font-size: 0.9rem; }
+    .buttons a { width: 100%; text-align: center; } /* full-width buttons */
 }
