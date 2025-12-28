@@ -1,0 +1,40 @@
+/* Full background image */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: url("image/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header image (10% height of viewport) */
+.top-banner img {
+    width: 100%;
+    height: auto;
+    max-height: 10vh;   /* 10% of viewport height */
+    object-fit: cover;
+    display: block;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.navbar-custom .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* Content Section */
+.content-section {
+    position: absolute;       /* position over background */
+    top: 50%;                 /* 50% from top */
+    left: 50%;                /* 50% from left */
+    transform: translate(-50%, -50%); /* center exactly */
+    color: #ffffff;
+    text-align: center;
+}
