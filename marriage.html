@@ -35,6 +35,11 @@
                         <input type="text" class="form-control" placeholder="Enter caste">
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">Gotra</label>
+                        <input type="text" class="form-control" placeholder="Gotra">
+                    </div>
+
                     <!-- Blood Group -->
                     <div class="mb-3">
                         <label class="form-label">Blood Group</label>
@@ -57,12 +62,43 @@
                         <input type="text" class="form-control" placeholder="Enter city">
                     </div>
 
+                     <div class="mb-3">
+                        <label class="form-label">Date  Of Birth </label>
+                        <input type="text" class="form-control" placeholder="Date Of Birth">
+                    </div>
+
+                     <div class="mb-3">
+                        <label class="form-label">Height</label>
+                        <input type="text" class="form-control" placeholder="Height">
+                    </div>
+
+                     <div class="mb-3">
+                        <label class="form-label">Parents Details</label>
+                        <input type="text" class="form-control" placeholder="Parents Details">
+                    </div>
+
+                     <div class="mb-3">
+                        <label class="form-label">Eduction Details</label>
+                        <input type="text" class="form-control" placeholder="Eduction Details">
+                    </div>
+                    
+
+                     <div class="mb-3">
+                        <label class="form-label">Mobile Number</label>
+                        <input type="text" class="form-control" placeholder="Mobile Number">
+                    </div>
+
+
+
+
+
+
                     <!-- Buttons -->
                     <div class="d-flex justify-content-between mt-4">
                         <button type="reset" class="btn btn-secondary">
                             Clear
                         </button>
-                        <button type="submit" class="btn btn-warning fw-bold">
+                        <button type="submit" class="btn btn-warning fw-bold" id="submit">
                             Submit
                         </button>
                     </div>
@@ -85,7 +121,22 @@ fetch("navbar.html")
     })
     .then(data => document.getElementById("navbar").innerHTML = data)
     .catch(err => console.error(err));
+
 </script>
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+  
+$(document).ready(function () {
+
+    $("#submit").on("click", function (e) {
+        e.preventDefault(); // prevent default action (for <a>)
+        alert("Data Filled SuccessFully!!!");
+    });
+
+});
+
+</script>
 </body>
 </html>
